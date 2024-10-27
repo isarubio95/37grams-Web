@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
             entry.target.classList.add('visible'); // Añadir clase al elemento visible
         }
         });
-    }, { threshold: 0.9 }); // Detectar cuando el 50% del hr sea visible
+    }, { threshold: 0.8 }); // Detectar cuando el 90% del hr sea visible
 
     // Observar cada <hr> de la página
     hrElements.forEach(hr => {
@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
  
-
 
 
 const checkbox = document.getElementById('check');
@@ -307,3 +306,26 @@ checkbox.addEventListener('change', changeLanguage);
 // Establecer el idioma inicial al cargar la página
 window.addEventListener('load', changeLanguage);
 
+
+
+
+// Selecciona todos los libros solo una vez
+const books = document.querySelectorAll('.book');
+
+// Función para abrir/cerrar un libro al hacer clic en móvil o pantallas pequeñas
+function bookInteract(event) {
+    const book = event.currentTarget; // El libro específico que fue clicado
+    book.classList.toggle('open');    // Alterna entre abierto y cerrado
+    book.classList.toggle('closed');  // Alterna la clase cerrada
+}
+
+// Detecta si es un dispositivo táctil
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+// Si es un dispositivo táctil, deshabilita hover y usa clic
+if (isTouchDevice) {
+    books.forEach(book => {
+        book.classList.add('closed')
+        book.addEventListener('click', bookInteract);
+    });
+}
