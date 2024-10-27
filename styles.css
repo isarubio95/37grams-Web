@@ -248,7 +248,7 @@ li a:hover, .a-middle span:hover {
 #title div {
     box-sizing: border-box;
     justify-content: center;
-    width: 40%;
+    width: 50%;
 }
 
 #title h1 {
@@ -266,6 +266,8 @@ li a:hover, .a-middle span:hover {
     color:#e2e2e2;
     font-size: 1.4rem;
     font-weight: 600;
+    width: 50%;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -282,6 +284,8 @@ li a:hover, .a-middle span:hover {
     animation: pulse;
     width: 100%;
     margin-bottom: 20px;
+    filter: url(./filtro-sharpen.svg);
+    filter: contrast(120%) brightness(130%); /* Alternativa de respaldo */
 }
 
 body section {
