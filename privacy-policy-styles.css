@@ -1,0 +1,50 @@
+header img {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header > a {
+    display: block; /* Hacer que el <a> sea un bloque para que ocupe todo el espacio */
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 250px;
+    height: 100px;
+}
+
+.a-left {
+    color: #dcdcdc;
+}
+
+.a-middle {
+    color: #dcdcdc;
+    -webkit-text-fill-color: unset;
+}
+
+.black {
+    color: #dcdcdc;
+}
+
+body {
+    margin: 12% 20%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+p, .derechos li {
+    text-align: left;
+    color: #dcdcdc;
+    line-height: 1.5;
+    font-size: 1.3rem;
+}
+
+footer {
+    background-color: inherit;
+}
