@@ -183,11 +183,12 @@ const translations = {
         // Navegación
         "nav-services": "Services",
         "nav-certifications": "Certifications",
+        "nav-academy" : "The Office",
         "nav-contact": "Contact",
         "nav-reviews": "Reviews",
 
         // Título principal
-        "welcome-text": "WELCOME TO",
+        "welcome-text": "Welcome to",
         "description": "As English professionals with more than 10 years of hands on experience, we aim to transcend the limits of language to acheive a higher linguistic standard.",
 
         // Slogans

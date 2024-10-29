@@ -17,7 +17,14 @@
 </head>
 <body>
     <header>   
-        <label class="nav-button" for="nav-button">
+        <div class="check" id="responsive-check">
+            <input id="check" type="checkbox">
+            <label for="check">
+                <span id="spanish">ES</span>
+                <span id="english" class="hidden">EN</span>
+            </label>
+        </div>
+        <label class="nav-button" for="nav-button" id="hamburger">
             <input type="checkbox" id="nav-button">
             <span></span>
             <span></span>
@@ -27,7 +34,7 @@
             <ul class="links" id="links">
                 <li><a href="#services" id="nav-services">Servicios</a></li>
                 <li><a href="#certificates" id="nav-certifications">Certificaciones</a></li>
-                <li><a href="#academy" id="nav-academy">La Academia </a></li>
+                <li><a href="#academy" id="nav-academy">La Oficina </a></li>
                 <li><a href="#contact" id="nav-contact">Contacto</a></li>
                 <li><a href="#reviews" id="nav-reviews">Opiniones</a></li>
                 <li>
@@ -46,11 +53,11 @@
     <main>   
         <!-- TITLE SECTION -->
         <section id="title">
-            <div>
+            <div id="img-h6-container">
                 <h6 id="welcome-text" data-aos="fade-down" data-aos-delay="600" data-aos-duration="600">Bienvenido a</h6>                
                 <img src="assets/logo-blanco.webp" alt="Logotipo blanco de la empresa en tamaño grande" data-aos="zoom-in" data-aos-duration="500">
             </div>   
-                <h5 id="description">Como profesionales del inglés con más de 10 años de 
+                <h5 id="description" data-aos="fade-up" data-aos-delay="1100" data-aos-duration="600">Como profesionales del inglés con más de 10 años de 
                     experiencia práctica, nuestro objetivo es trascender los límites del lenguaje para alcanzar un estándar lingüístico superior.</h5>          
         </section>
 
@@ -59,7 +66,7 @@
             <div class="hr-container">
                 <hr class="hr">
             </div>          
-            <div data-aos="fade-down" data-aos-duration="1500">
+            <div data-aos="zoom-in" data-aos-duration="800">
                 <h1><img src="assets/constancia.png" alt="Icono representando la constancia en el aprendizaje del inglés"><span id="slogan-title-1">CONSTANCIA</span></h1>
                 <h2 id="slogan-text-1">El progreso requiere perseverancia.
                     Fomentamos un enfoque disciplinado para que cada
@@ -68,7 +75,7 @@
             <div class="hr-container">
                 <hr class="hr">
             </div>
-            <div data-aos="fade-down" data-aos-duration="1500">
+            <div data-aos="zoom-in" data-aos-duration="800">
                 <h1><img src="assets/disciplina.png" alt="Icono representando la disciplina en el aprendizaje del inglés"><span id="slogan-title-2">DISCIPLINA</span></h1>
                 <h2 id="slogan-text-2">Aspiramos a la máxima calidad en cada clase,<br>
                     ofreciendo a los estudiantes herramientas para destacar<br>
@@ -77,7 +84,7 @@
             <div class="hr-container">
                 <hr class="hr">
             </div>
-            <div data-aos="fade-down" data-aos-duration="1500">
+            <div data-aos="zoom-in" data-aos-duration="800">
                 <h1><img src="assets/excelencia.png" alt="Icono representando la excelencia en el aprendizaje del inglés"><span id="slogan-title-3">EXCELENCIA</span></h1>
                 <h2 id="slogan-text-3">La dedicación a largo plazo es <br>
                     clave para el éxito. Cultivamos la perseverancia <br>
@@ -160,7 +167,7 @@
         </section>
     
         <!-- OFFICE SECTION -->
-        <section id="academy">
+        <section id="academy" data-aos="fade-up">
             <h1 id="office-title">THE OFFICE</h1>  
             <h2 id="office-description">El lugar donde los objetivos y metas se cumplen. La Academia es nuestro santuario del aprendizaje. <br> 
                 Con una de las tasas más altas de éxito en nuestro entorno regional, entrar significa cruzar 
@@ -172,21 +179,21 @@
         </section>
 
         <!-- CONTACT SECTION -->
-        <section id="contact" data-aos="fade-in">
-            <form action="form-handler.php" method="post">
+        <section id="contact" data-aos="zoom-in">
+            <form action="/php/form-handler.php" method="post">
                 <h1 id="contact-title">CONTACTO</h1>
                 <br>
                 <div>
                     <label for="input-name" id="label-name">Nombre</label>
-                    <input type="text" id="input-name" class="input" required>
+                    <input type="text" id="input-name" name="name" class="input" required>
                 </div>
                 <div class="email-container">
                     <label for="input-email" id="label-email">Correo</label>
-                    <input type="email" id="input-email" class="input" required>
+                    <input type="email" id="input-email" name="email" class="input" required>
                 </div>
                 <div class="message-container">
                     <label for="input-message" id="label-message">Mensaje</label>
-                    <textarea name="input-message" id="input-message" class="input" cols="30" rows="7" required></textarea>
+                    <textarea name="message" id="input-message" class="input" cols="30" rows="7" required></textarea>
                 </div>
                 <div class="privacy-container">
                     <input type="checkbox" id="checkbox" name="checkbox" required>
@@ -306,8 +313,8 @@
                 <section>
                     <h2 id="footer-location-title">Ubicación</h2>
                     <ul>
-                        <li> <a href="https://maps.app.goo.gl/z1A3HzfgpJzpRNrU9">C/República de Argentina, 44<br>
-                            26005 Logroño (La Rioja)
+                        <li> <a href="https://maps.app.goo.gl/z1A3HzfgpJzpRNrU9">Avd. República de Argentina, 44<br>
+                            26002 Logroño (La Rioja)
                         </a> </li>
                     </ul>
                 </section>

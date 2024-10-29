@@ -53,7 +53,11 @@ li a:hover, .a-middle span:hover {
     font-size: 25px;
     top: 3px;
 }
-   
+
+#responsive-check {
+    display: none;
+}
+
 .check input[type="checkbox"],
 .check label,
 .check label::before,
@@ -153,7 +157,6 @@ li a:hover, .a-middle span:hover {
     font-size: 0.6rem;
     font-weight: 700;
     transition: background-color 0.2s ease; /* Transición de color de fondo */
-
 }
 
 #english {
@@ -274,6 +277,7 @@ li a:hover, .a-middle span:hover {
 #title h6 {
     color:#e2e2e2;
     font-size: 1.2rem;
+    margin: 0 0 25px 15px;
     margin-left: 15px;
     margin-bottom: 25px;
     padding: 0;
@@ -550,6 +554,10 @@ form:hover {
     box-shadow: 0px 0px 14px rgb(136, 135, 135); /* Sombra */
 }
 
+::placeholder {
+    background-color: #7c7c7c;
+}
+
 form > div {
     display: flex;
     flex-direction: row; /* Coloca el label y el input en la misma fila */
@@ -798,6 +806,9 @@ footer p {
     #title > div {
         width: 90%;
     }
+    #title h5 {
+        width: 80%;
+    }
     #slogan h2 {
         width: 90%;
     }
@@ -809,6 +820,7 @@ footer p {
         height: 0;
     }
     .links {
+        z-index: 10;
         position: initial;
         width: fit-content;
         height: fit-content;
@@ -868,28 +880,47 @@ footer p {
     } 
 }
 
+@media (max-width: 768px) {
+    footer section {
+        margin: 0;
+        width: 100%;
+        margin-left: 64px;
+        justify-content: left;
+        align-items: flex-start;
+    }
+}
+
+
 @media (max-width: 500px) {
     body section {
         margin: 200px 0;
     }
-    #title > div {
-        margin-top: 10%;
+    .check {
+        display: none;
+    }
+    #responsive-check {
+        display: flex;
+        position: absolute;
+        top: 10px;
+        left: 10px;
     }
     #title h5 {
-        margin-top: 20px;
+        width: 90%;
+        display: flex;
     }
     #title h6 {
         margin: 0 0 20px 0;
     }
     .nav-button {
         display: flex;
-        margin: 5px;
+        margin: 10px;
     }
     .links {
         margin: 0 4px;
         gap: 15px;
         padding: 10px 16px;
         border-radius: 0 0 10px 10px;
+        background: #424242;
     }
     .book-container {
         grid-template-columns: 1fr;
@@ -918,8 +949,9 @@ footer p {
         width: 110px;
     }
     footer section {
+        margin: 0;
         width: 100%;
-        margin-left: 12px;
+        margin-left: 32px;
         justify-content: left;
         align-items: flex-start;
     }
@@ -934,4 +966,8 @@ footer p {
     .wrap { 
         animation: slide 25s linear infinite;
     }
+}
+
+@media (max-width: 425px) {
+    
 }
