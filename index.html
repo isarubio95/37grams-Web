@@ -11,19 +11,17 @@
     <meta property="og:type" content="website">
     <title>Servicios de Consultoría en Inglés - 37GRAMS.</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="module">
+        import translations from './js/translations.js';
+        window.translations = translations;
+    </script>
+    <script src="./js/main.js" type="module"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <header>   
-        <div class="check" id="responsive-check">
-            <input id="check" type="checkbox">
-            <label for="check">
-                <span id="spanish">ES</span>
-                <span id="english" class="hidden">EN</span>
-            </label>
-        </div>
         <label class="nav-button" for="nav-button" id="hamburger">
             <input type="checkbox" id="nav-button">
             <span></span>
@@ -38,14 +36,14 @@
                 <li><a href="#contact" id="nav-contact">Contacto</a></li>
                 <li><a href="#reviews" id="nav-reviews">Opiniones</a></li>
                 <li>
-                    <div class="check">
-                        <input id="check" type="checkbox">
-                        <label for="check">
-                            <span id="spanish">ES</span>
-                            <span id="english" class="hidden">EN</span>
+                    <div class="lang-switch">
+                        <input id="lang-toggle" type="checkbox" />
+                        <label for="lang-toggle" class="slider">
+                            <span class="lang-text es">ES</span>
+                            <span class="lang-text en">EN</span>
                         </label>
                     </div>
-                </li>     
+                </li>    
             </ul>
         </nav>
     </header>
@@ -350,11 +348,12 @@
                     </ul>               
                 </section>
             </div> 
-            <p id="footer-copyright">&copy; 2024 37GRAMS.</p>  
+            <p id="footer-copyright">
+                &copy;<script>document.write(new Date().getFullYear())</script> 37GRAMS.
+                <a href="https://rioja.dev" target="_blank" rel="noopener" style="margin-left: 4px;">Isaías Rubio</a>
+            </p>
         </div>     
     </footer>
-    
-    <script defer src="script.js"></script>
     <script>
         AOS.init({
             once: true, // Todas las animaciones ocurren solo una vez
